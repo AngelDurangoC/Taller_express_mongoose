@@ -1,0 +1,34 @@
+{
+  "name": "adso-backend-guia7",
+  "version": "1.0.0",
+  "description": "Taller Práctico Guía #7 ADSO (228118) - API RESTful con Node.js, Express, MongoDB (Mongoose) y soporte MySQL",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "SENA",
+    "ADSO",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Mongoose",
+    "MySQL",
+    "REST"
+  ],
+  "author": "Aprendiz ADSO - Ficha 228118",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.1",
+    "mysql2": "^3.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

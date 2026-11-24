@@ -1,0 +1,254 @@
+{
+  "info": {
+    "_postman_id": "a7d50e91-2281-4180-9310-804000000007",
+    "name": "ADSO Guía #7 - API REST Node.js + Express + MongoDB",
+    "description": "Colección oficial de pruebas para los 10 endpoints RESTful obligatorios del RAP 593108-04 (Programa ADSO - Código 228118).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Crear Producto (POST /api/productos)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Laptop ASUS Vivobook Pro 15\",\n  \"precio\": 3850000,\n  \"categoria\": \"Computadores\",\n  \"stock\": 12\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/productos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "productos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "2. Listar Todos los Productos (GET /api/productos)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/productos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "productos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3. Consultar Producto por ID (GET /api/productos/:id)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/productos/67435a1b9c8d2e0012345678",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "productos",
+            "67435a1b9c8d2e0012345678"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "4. Actualizar Producto Total (PUT /api/productos/:id)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Laptop ASUS Vivobook Pro 15 OLED 32GB\",\n  \"precio\": 4290000,\n  \"categoria\": \"Computadores\",\n  \"stock\": 8\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/productos/67435a1b9c8d2e0012345678",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "productos",
+            "67435a1b9c8d2e0012345678"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "5. Eliminar Producto por ID (DELETE /api/productos/:id)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/productos/67435a1b9c8d2e0012345678",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "productos",
+            "67435a1b9c8d2e0012345678"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "6. Filtrar Productos por Categoría (GET /api/productos/categoria/:cat)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/productos/categoria/Computadores",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "productos",
+            "categoria",
+            "Computadores"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "7. Registrar Usuario (POST /api/usuarios/registro)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Carlos Andrés Gómez\",\n  \"email\": \"carlos.gomez@sena.edu.co\",\n  \"password\": \"ClaveSegura2026*\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/usuarios/registro",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "usuarios",
+            "registro"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "8. Iniciar Sesión Usuario (POST /api/usuarios/login)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"carlos.gomez@sena.edu.co\",\n  \"password\": \"ClaveSegura2026*\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/usuarios/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "usuarios",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "9. Listar Catálogo de Usuarios (GET /api/usuarios)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/usuarios",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "usuarios"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "10. Reporte Estadístico Agregado (GET /api/reportes/estadisticas)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/reportes/estadisticas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "reportes",
+            "estadisticas"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
